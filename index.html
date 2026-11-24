@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mr. Mø Tattoo Studio - Estudio privado de tatuajes con más de 30 años de experiencia." />
+  <title>Mr. Mø Tattoo Studio | Estudio Privado</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= ENCABEZADO / HERO ================= -->
+  <header class="hero" id="inicio">
+    <div class="container hero__content">
+      <div class="hero__logo-wrapper">
+        <img 
+          src="assets/Logo.png" 
+          alt="Logo Mr. Mø Tattoo Studio" 
+          class="hero__logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="placeholder-circle" style="display: none;">LOGO</div>
+      </div>
+
+      <h1 class="hero__title">MR. MØ TATTOO STUDIO</h1>
+      <p class="hero__subtitle">30 AÑOS DE EXPERIENCIA • ESTUDIO PRIVADO</p>
+      <div class="divider"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HISTORIA Y EXPERIENCIA ================= -->
+    <section class="section" id="historia">
+      <div class="container">
+        <h2 class="section__title">Historia y Experiencia</h2>
+        
+        <div class="split-layout">
+          <div class="split-layout__media">
+            <div class="portrait-frame">
+              <img 
+                src="assets/Tatuador.png" 
+                alt="Artista de Mr. Mø Tattoo Studio"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-box placeholder-box--round" style="display: none;">
+                <span>Foto del Artista<br><small>(assets/img/artista.jpg)</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-layout__text">
+            <p>
+              Con <strong>30 años de trayectoria</strong> en el arte del tatuaje, 
+              <strong>Mr. Mø Tattoo Studio</strong> nace como un espacio privado pensado 
+              para ofrecer atención personalizada, tranquilidad y dedicación absoluta en cada pieza.
+            </p>
+            <p>
+              Cada diseño se trabaja bajo estrictos estándares de higiene y técnica, 
+              adaptándose a la idea y anatomía de cada cliente para lograr piezas duraderas 
+              y con identidad propia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CUIDADOS DEL TATUAJE ================= -->
+    <section class="section section--alt" id="cuidados">
+      <div class="container">
+        <h2 class="section__title">Cuidados del Tatuaje</h2>
+
+        <div class="split-layout">
+          <div class="split-layout__media">
+            <div class="square-frame">
+              <img 
+                src="assets/Cuidados_tatuaje.jpg" 
+                alt="Higiene y cuidados del tatuaje"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-box" style="display: none;">
+                <span>Imagen Higiene / Salud<br><small>(assets/img/cuidados.jpg)</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-layout__text">
+            <ul class="care-list">
+              <li>
+                <span class="care-list__bullet">✦</span>
+                <div>
+                  <strong>Limpieza inicial:</strong> Retira el vendaje según la indicación dada en el estudio y lava suavemente con agua limpia y jabón neutro sin perfume.
+                </div>
+              </li>
+              <li>
+                <span class="care-list__bullet">✦</span>
+                <div>
+                  <strong>Hidratación controlada:</strong> Aplica una capa muy fina de crema cicatrizante recomendada, evitando saturar la piel.
+                </div>
+              </li>
+              <li>
+                <span class="care-list__bullet">✦</span>
+                <div>
+                  <strong>Protección solar y agua:</strong> Evita la exposición directa al sol, piscinas, saunas o playas durante las primeras semanas.
+                </div>
+              </li>
+              <li>
+                <span class="care-list__bullet">✦</span>
+                <div>
+                  <strong>No rascar ni retirar costras:</strong> Deja que la piel sane de forma natural para conservar intacta la definición y el pigmento.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERÍA DE TRABAJOS (5 PIEZAS) ================= -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <h2 class="section__title">Galería de Trabajos</h2>
+        <p class="section__intro">Una muestra de estilos y piezas realizadas en el estudio.</p>
+
+        <!-- Fila superior: 3 imágenes | Fila inferior: 2 imágenes centradas (según wireframe) -->
+        <div class="gallery-grid">
+          <!-- Trabajo 1 -->
+          <figure class="gallery-card">
+            <img 
+              src="assets/Tatuaje_1.png" 
+              alt="Tatuaje 1 - Mr. Mø Tattoo Studio"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="placeholder-card" style="display: none;">Tatuaje 1<br><small>tattoo-1.jpg</small></div>
+          </figure>
+
+          <!-- Trabajo 2 -->
+          <figure class="gallery-card">
+            <img 
+              src="assets/Tatuaje_5.png" 
+              alt="Tatuaje 2 - Mr. Mø Tattoo Studio"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="placeholder-card" style="display: none;">Tatuaje 2<br><small>tattoo-2.jpg</small></div>
+          </figure>
+
+          <!-- Trabajo 3 -->
+          <figure class="gallery-card">
+            <img 
+              src="assets/Tatuaje_2.png" 
+              alt="Tatuaje 3 - Mr. Mø Tattoo Studio"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="placeholder-card" style="display: none;">Tatuaje 3<br><small>tattoo-3.jpg</small></div>
+          </figure>
+
+          <!-- Trabajo 4 -->
+          <figure class="gallery-card">
+            <img 
+              src="assets/Tatuaje_3.png" 
+              alt="Tatuaje 4 - Mr. Mø Tattoo Studio"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="placeholder-card" style="display: none;">Tatuaje 4<br><small>tattoo-4.jpg</small></div>
+          </figure>
+
+          <!-- Trabajo 5 -->
+          <figure class="gallery-card">
+            <img 
+              src="assets/Tatuaje_4.png" 
+              alt="Tatuaje 5 - Mr. Mø Tattoo Studio"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="placeholder-card" style="display: none;">Tatuaje 5<br><small>tattoo-5.jpg</small></div>
+          </figure>
+        </div>
+
+        <div class="gallery-cta">
+          <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            Ver más trabajos en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= UBICACIÓN Y HORARIOS ================= -->
+    <section class="section section--alt" id="ubicacion">
+      <div class="container">
+        <h2 class="section__title">Ubicación y Horarios</h2>
+
+        <div class="location-layout">
+          <div class="location-info">
+            <div class="info-block">
+              <h3>Dirección del Estudio</h3>
+              <p>Carrera 3 No 23 – 480, Barrio Centenario</p>
+            </div>
+
+            <div class="info-block">
+              <h3>Modalidad y Horarios</h3>
+              <p>
+                <strong>Estudio Privado:</strong> Atención exclusivamente con cita previa. 
+                Los horarios son flexibles y se acuerdan directamente por WhatsApp para brindarte una sesión sin afanes.
+              </p>
+            </div>
+
+            <div class="info-block">
+              <h3>Contacto Directo</h3>
+              <p>WhatsApp: <a href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20quisiera%20cotizar%20un%20tatuaje%20y%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer">+57 322 757 9743</a></p>
+              <p>Instagram: <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer">@memo_grigori</a></p>
+            </div>
+          </div>
+
+          <div class="location-map">
+            <!-- Mapa embebido de Google Maps con búsqueda exacta de la dirección -->
+            <iframe
+              title="Ubicación Mr. Mø Tattoo Studio"
+              src="https://maps.google.com/maps?q=Carrera%203%20No%2023%20-%20480%20Barrio%20Centenario&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>Mr. Mø Tattoo Studio</strong>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ================= BOTONES FLOTANTES (ABAJO A LA DERECHA) ================= -->
+  <div class="floating-actions" aria-label="Contacto rápido">
+    <a 
+      href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="fab fab--whatsapp"
+      aria-label="Contactar por WhatsApp"
+      title="Escríbenos por WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.81-4.19-4.96-4.38-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.79-.36.2 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.83 2.02.9 2.17.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.29.15.47.12.64-.07.17-.19.74-.86.93-1.16.2-.29.39-.24.66-.15.27.1 1.71.81 2 .95.29.15.49.22.56.34.08.13.08.73-.16 1.41z"/>
+      </svg>
+    </a>
+
+    <a 
+      href="https://www.instagram.com/memo_grigori" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="fab fab--instagram"
+      aria-label="Visitar Instagram"
+      title="Síguenos en Instagram"
+    >
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25zM12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+      </svg>
+    </a>
+  </div>
+
+</body>
+</html>
