@@ -3,65 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mr. Mø Tattoo Studio - Estudio privado de tatuajes con más de 30 años de experiencia." />
+  <meta name="theme-color" content="#111113" />
+  <meta name="description" content="Mr. Mø Tattoo Studio: estudio privado de tatuajes con más de 30 años de experiencia. Atención personalizada con cita previa." />
+
+  <!-- Al compartir el enlace en WhatsApp / redes -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mr. Mø Tattoo Studio | Estudio privado de tatuajes" />
+  <meta property="og:description" content="Más de 30 años tatuando. Agenda tu cita por WhatsApp." />
+  <meta property="og:image" content="assets/Logo.png" />
+  <meta property="og:locale" content="es_CO" />
+
   <title>Mr. Mø Tattoo Studio | Estudio Privado</title>
+  <link rel="icon" href="assets/Logo.png" type="image/png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Datos estructurados: ayudan a Google a mostrar el negocio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "Mr. Mø Tattoo Studio",
+    "telephone": "+573227579743",
+    "address": { "@type": "PostalAddress", "streetAddress": "Carrera 3 No 23-480, Barrio Centenario", "addressCountry": "CO" },
+    "sameAs": ["https://www.instagram.com/memo_grigori"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#historia">Saltar al contenido</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- ================= ENCABEZADO / HERO ================= -->
+  <!-- ================= NAVEGACIÓN ================= -->
+  <nav class="nav" id="nav" aria-label="Principal">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__brand" aria-label="Ir al inicio">
+        <img src="assets/Logo.png" alt="" class="nav__logo" data-hide-on-error />
+        <span>Mr. Mø</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#cuidados">Cuidados</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a class="nav__cta" href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">Agendar cita</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
   <header class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+
     <div class="container hero__content">
-      <div class="hero__logo-wrapper">
-        <img 
-          src="assets/Logo.png" 
-          alt="Logo Mr. Mø Tattoo Studio" 
-          class="hero__logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <div class="placeholder-circle" style="display: none;">LOGO</div>
+      <div class="hero__logo-wrapper" id="logoTilt">
+        <span class="hero__ring hero__ring--outer" aria-hidden="true"></span>
+        <span class="hero__ring hero__ring--inner" aria-hidden="true"></span>
+        <img src="assets/Logo.png" alt="Logo Mr. Mø Tattoo Studio" class="hero__logo" data-fallback />
+        <div class="placeholder-circle" hidden>LOGO</div>
       </div>
 
-      <h1 class="hero__title">MR. MØ TATTOO STUDIO</h1>
-      <p class="hero__subtitle">30 AÑOS DE EXPERIENCIA • ESTUDIO PRIVADO</p>
+      <h1 class="hero__title" aria-label="Mr. Mø Tattoo Studio">
+        <span class="hero__title-line" data-split>MR. MØ</span>
+        <span class="hero__title-line hero__title-line--sub" data-split>TATTOO STUDIO</span>
+      </h1>
+      <p class="hero__subtitle">30 años de experiencia • Estudio privado</p>
       <div class="divider"></div>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20quisiera%20cotizar%20un%20tatuaje%20y%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer">Cotiza tu tatuaje</a>
+        <a class="btn btn--ghost" href="#galeria">Ver trabajos</a>
+      </div>
     </div>
+
+    <a href="#historia" class="hero__scroll" aria-label="Bajar a la siguiente sección"><span></span></a>
   </header>
 
+  <!-- ================= FRANJA DE CONFIANZA ================= -->
+  <section class="trust" aria-label="Por qué elegirnos">
+    <div class="container trust__grid">
+      <div class="trust__item">
+        <strong class="trust__big"><span data-count="30">30</span>+</strong>
+        <span>años tatuando</span>
+      </div>
+      <div class="trust__item">
+        <strong class="trust__big">1 a 1</strong>
+        <span>estudio privado, solo con cita</span>
+      </div>
+      <div class="trust__item">
+        <strong class="trust__big">100%</strong>
+        <span>diseño adaptado a ti</span>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <!-- ================= HISTORIA Y EXPERIENCIA ================= -->
+    <!-- ================= HISTORIA ================= -->
     <section class="section" id="historia">
       <div class="container">
-        <h2 class="section__title">Historia y Experiencia</h2>
-        
+        <h2 class="section__title reveal">Historia y Experiencia</h2>
+
         <div class="split-layout">
-          <div class="split-layout__media">
+          <div class="split-layout__media reveal">
             <div class="portrait-frame">
-              <img 
-                src="assets/Tatuador.png" 
-                alt="Artista de Mr. Mø Tattoo Studio"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="placeholder-box placeholder-box--round" style="display: none;">
-                <span>Foto del Artista<br><small>(assets/img/artista.jpg)</small></span>
+              <img src="assets/Tatuador.png" alt="Artista de Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-box placeholder-box--round" hidden>
+                <span>Foto del artista<br><small>(assets/Tatuador.png)</small></span>
               </div>
             </div>
           </div>
 
-          <div class="split-layout__text">
+          <div class="split-layout__text reveal">
             <p>
-              Con <strong>30 años de trayectoria</strong> en el arte del tatuaje, 
-              <strong>Mr. Mø Tattoo Studio</strong> nace como un espacio privado pensado 
+              Con <strong>30 años de trayectoria</strong> en el arte del tatuaje,
+              <strong>Mr. Mø Tattoo Studio</strong> nace como un espacio privado pensado
               para ofrecer atención personalizada, tranquilidad y dedicación absoluta en cada pieza.
             </p>
             <p>
-              Cada diseño se trabaja bajo estrictos estándares de higiene y técnica, 
-              adaptándose a la idea y anatomía de cada cliente para lograr piezas duraderas 
+              Cada diseño se trabaja bajo estrictos estándares de higiene y técnica,
+              adaptándose a la idea y anatomía de cada cliente para lograr piezas duraderas
               y con identidad propia.
             </p>
           </div>
@@ -69,50 +138,38 @@
       </div>
     </section>
 
-    <!-- ================= CUIDADOS DEL TATUAJE ================= -->
+    <!-- ================= CUIDADOS ================= -->
     <section class="section section--alt" id="cuidados">
       <div class="container">
-        <h2 class="section__title">Cuidados del Tatuaje</h2>
+        <h2 class="section__title reveal">Cuidados del Tatuaje</h2>
 
         <div class="split-layout">
-          <div class="split-layout__media">
+          <div class="split-layout__media reveal">
             <div class="square-frame">
-              <img 
-                src="assets/Cuidados_tatuaje.jpg" 
-                alt="Higiene y cuidados del tatuaje"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="placeholder-box" style="display: none;">
-                <span>Imagen Higiene / Salud<br><small>(assets/img/cuidados.jpg)</small></span>
+              <img src="assets/Cuidados_tatuaje.jpg" alt="Higiene y cuidados del tatuaje" data-fallback loading="lazy" />
+              <div class="placeholder-box" hidden>
+                <span>Imagen de cuidados<br><small>(assets/Cuidados_tatuaje.jpg)</small></span>
               </div>
             </div>
           </div>
 
           <div class="split-layout__text">
             <ul class="care-list">
-              <li>
-                <span class="care-list__bullet">✦</span>
-                <div>
-                  <strong>Limpieza inicial:</strong> Retira el vendaje según la indicación dada en el estudio y lava suavemente con agua limpia y jabón neutro sin perfume.
-                </div>
+              <li class="reveal">
+                <span class="care-list__bullet" aria-hidden="true">✦</span>
+                <div><strong>Limpieza inicial:</strong> Retira el vendaje según la indicación dada en el estudio y lava suavemente con agua limpia y jabón neutro sin perfume.</div>
               </li>
-              <li>
-                <span class="care-list__bullet">✦</span>
-                <div>
-                  <strong>Hidratación controlada:</strong> Aplica una capa muy fina de crema cicatrizante recomendada, evitando saturar la piel.
-                </div>
+              <li class="reveal">
+                <span class="care-list__bullet" aria-hidden="true">✦</span>
+                <div><strong>Hidratación controlada:</strong> Aplica una capa muy fina de crema cicatrizante recomendada, evitando saturar la piel.</div>
               </li>
-              <li>
-                <span class="care-list__bullet">✦</span>
-                <div>
-                  <strong>Protección solar y agua:</strong> Evita la exposición directa al sol, piscinas, saunas o playas durante las primeras semanas.
-                </div>
+              <li class="reveal">
+                <span class="care-list__bullet" aria-hidden="true">✦</span>
+                <div><strong>Protección solar y agua:</strong> Evita la exposición directa al sol, piscinas, saunas o playas durante las primeras semanas.</div>
               </li>
-              <li>
-                <span class="care-list__bullet">✦</span>
-                <div>
-                  <strong>No rascar ni retirar costras:</strong> Deja que la piel sane de forma natural para conservar intacta la definición y el pigmento.
-                </div>
+              <li class="reveal">
+                <span class="care-list__bullet" aria-hidden="true">✦</span>
+                <div><strong>No rascar ni retirar costras:</strong> Deja que la piel sane de forma natural para conservar intacta la definición y el pigmento.</div>
               </li>
             </ul>
           </div>
@@ -120,149 +177,134 @@
       </div>
     </section>
 
-    <!-- ================= GALERÍA DE TRABAJOS (5 PIEZAS) ================= -->
+    <!-- ================= GALERÍA ================= -->
     <section class="section" id="galeria">
       <div class="container">
-        <h2 class="section__title">Galería de Trabajos</h2>
-        <p class="section__intro">Una muestra de estilos y piezas realizadas en el estudio.</p>
+        <h2 class="section__title reveal">Galería de Trabajos</h2>
+        <p class="section__intro reveal">Una muestra de estilos y piezas realizadas en el estudio. Toca una imagen para verla en grande.</p>
 
-        <!-- Fila superior: 3 imágenes | Fila inferior: 2 imágenes centradas (según wireframe) -->
         <div class="gallery-grid">
-          <!-- Trabajo 1 -->
-          <figure class="gallery-card">
-            <img 
-              src="assets/Tatuaje_1.png" 
-              alt="Tatuaje 1 - Mr. Mø Tattoo Studio"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="placeholder-card" style="display: none;">Tatuaje 1<br><small>tattoo-1.jpg</small></div>
+          <figure class="gallery-card reveal">
+            <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 1">
+              <img src="assets/Tatuaje_1.png" alt="Tatuaje 1 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-card" hidden>Tatuaje 1</div>
+            </button>
           </figure>
 
-          <!-- Trabajo 2 -->
-          <figure class="gallery-card">
-            <img 
-              src="assets/Tatuaje_5.png" 
-              alt="Tatuaje 2 - Mr. Mø Tattoo Studio"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="placeholder-card" style="display: none;">Tatuaje 2<br><small>tattoo-2.jpg</small></div>
+          <figure class="gallery-card reveal">
+            <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 2">
+              <img src="assets/Tatuaje_5.png" alt="Tatuaje 2 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-card" hidden>Tatuaje 2</div>
+            </button>
           </figure>
 
-          <!-- Trabajo 3 -->
-          <figure class="gallery-card">
-            <img 
-              src="assets/Tatuaje_2.png" 
-              alt="Tatuaje 3 - Mr. Mø Tattoo Studio"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="placeholder-card" style="display: none;">Tatuaje 3<br><small>tattoo-3.jpg</small></div>
+          <figure class="gallery-card reveal">
+            <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 3">
+              <img src="assets/Tatuaje_2.png" alt="Tatuaje 3 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-card" hidden>Tatuaje 3</div>
+            </button>
           </figure>
 
-          <!-- Trabajo 4 -->
-          <figure class="gallery-card">
-            <img 
-              src="assets/Tatuaje_3.png" 
-              alt="Tatuaje 4 - Mr. Mø Tattoo Studio"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="placeholder-card" style="display: none;">Tatuaje 4<br><small>tattoo-4.jpg</small></div>
+          <figure class="gallery-card reveal">
+            <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 4">
+              <img src="assets/Tatuaje_3.png" alt="Tatuaje 4 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-card" hidden>Tatuaje 4</div>
+            </button>
           </figure>
 
-          <!-- Trabajo 5 -->
-          <figure class="gallery-card">
-            <img 
-              src="assets/Tatuaje_4.png" 
-              alt="Tatuaje 5 - Mr. Mø Tattoo Studio"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="placeholder-card" style="display: none;">Tatuaje 5<br><small>tattoo-5.jpg</small></div>
+          <figure class="gallery-card reveal">
+            <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 5">
+              <img src="assets/Tatuaje_4.png" alt="Tatuaje 5 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
+              <div class="placeholder-card" hidden>Tatuaje 5</div>
+            </button>
           </figure>
         </div>
 
-        <div class="gallery-cta">
-          <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer" class="btn-outline">
-            Ver más trabajos en Instagram
-          </a>
+        <div class="gallery-cta reveal">
+          <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Ver más trabajos en Instagram</a>
         </div>
       </div>
     </section>
 
-    <!-- ================= UBICACIÓN Y HORARIOS ================= -->
+    <!-- ================= UBICACIÓN ================= -->
     <section class="section section--alt" id="ubicacion">
       <div class="container">
-        <h2 class="section__title">Ubicación y Horarios</h2>
+        <h2 class="section__title reveal">Ubicación y Horarios</h2>
 
         <div class="location-layout">
-          <div class="location-info">
+          <div class="location-info reveal">
             <div class="info-block">
-              <h3>Dirección del Estudio</h3>
+              <h3>Dirección del estudio</h3>
               <p>Carrera 3 No 23 – 480, Barrio Centenario</p>
             </div>
 
             <div class="info-block">
-              <h3>Modalidad y Horarios</h3>
-              <p>
-                <strong>Estudio Privado:</strong> Atención exclusivamente con cita previa. 
-                Los horarios son flexibles y se acuerdan directamente por WhatsApp para brindarte una sesión sin afanes.
-              </p>
+              <h3>Modalidad y horarios</h3>
+              <p><strong>Estudio privado:</strong> atención exclusivamente con cita previa. Los horarios son flexibles y se acuerdan directamente por WhatsApp para brindarte una sesión sin afanes.</p>
             </div>
 
             <div class="info-block">
-              <h3>Contacto Directo</h3>
+              <h3>Contacto directo</h3>
               <p>WhatsApp: <a href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20quisiera%20cotizar%20un%20tatuaje%20y%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer">+57 322 757 9743</a></p>
               <p>Instagram: <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer">@memo_grigori</a></p>
             </div>
           </div>
 
-          <div class="location-map">
-            <!-- Mapa embebido de Google Maps con búsqueda exacta de la dirección -->
+          <div class="location-map reveal">
+            <!-- TIP: agrega la ciudad al final de q= (por ejemplo ...%20Centenario%2C%20Bucaramanga) para evitar ubicaciones ambiguas -->
             <iframe
               title="Ubicación Mr. Mø Tattoo Studio"
-              src="https://maps.google.com/maps?q=Carrera%203%20No%2023%20-%20480%20Barrio%20Centenario&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Carrera%203%20No%2023-480%20Barrio%20Centenario&t=&z=16&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ================= CIERRE / CTA FINAL ================= -->
+    <section class="closing">
+      <div class="container reveal">
+        <h2>¿Listo para tu próxima pieza?</h2>
+        <p>Cuéntanos tu idea y coordinamos tu cita.</p>
+        <a class="btn btn--solid" href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+      </div>
+    </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 <strong>Mr. Mø Tattoo Studio</strong>. Todos los derechos reservados.</p>
+      <p>© <span id="year">2026</span> <strong>Mr. Mø Tattoo Studio</strong>. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- ================= BOTONES FLOTANTES (ABAJO A LA DERECHA) ================= -->
+  <!-- ================= VISOR DE IMÁGENES ================= -->
+  <dialog class="lightbox" id="lightbox" aria-label="Imagen ampliada">
+    <button type="button" class="lightbox__close" aria-label="Cerrar">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Anterior">&#8249;</button>
+    <img src="" alt="" class="lightbox__img" />
+    <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Siguiente">&#8250;</button>
+  </dialog>
+
+  <!-- ================= BOTONES FLOTANTES ================= -->
   <div class="floating-actions" aria-label="Contacto rápido">
-    <a 
-      href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="fab fab--whatsapp"
-      aria-label="Contactar por WhatsApp"
-      title="Escríbenos por WhatsApp"
-    >
+    <button type="button" class="fab fab--top" id="toTop" aria-label="Volver arriba" title="Volver arriba">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <a href="https://wa.me/573227579743?text=Hola%20Mr.%20M%C3%B8,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="fab fab--whatsapp" aria-label="Contactar por WhatsApp" title="Escríbenos por WhatsApp">
       <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
         <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.81-4.19-4.96-4.38-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.79-.36.2 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.83 2.02.9 2.17.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.29.15.47.12.64-.07.17-.19.74-.86.93-1.16.2-.29.39-.24.66-.15.27.1 1.71.81 2 .95.29.15.49.22.56.34.08.13.08.73-.16 1.41z"/>
       </svg>
     </a>
 
-    <a 
-      href="https://www.instagram.com/memo_grigori" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="fab fab--instagram"
-      aria-label="Visitar Instagram"
-      title="Síguenos en Instagram"
-    >
+    <a href="https://www.instagram.com/memo_grigori" target="_blank" rel="noopener noreferrer" class="fab fab--instagram" aria-label="Visitar Instagram" title="Síguenos en Instagram">
       <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
         <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25zM12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
       </svg>
     </a>
   </div>
 
+  <script src="Js/Main.js"></script>
 </body>
 </html>
