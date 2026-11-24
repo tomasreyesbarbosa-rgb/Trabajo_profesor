@@ -183,7 +183,7 @@
         <h2 class="section__title reveal">Galería de Trabajos</h2>
         <p class="section__intro reveal">Una muestra de estilos y piezas realizadas en el estudio. Toca una imagen para verla en grande.</p>
 
-        <div class="gallery-grid">
+        <div class="gallery-grid" role="region" aria-label="Carrusel de trabajos" tabindex="0">
           <figure class="gallery-card reveal">
             <button type="button" class="gallery-card__btn" aria-label="Ampliar tatuaje 1">
               <img src="assets/Tatuaje_1.png" alt="Tatuaje 1 - Mr. Mø Tattoo Studio" data-fallback loading="lazy" />
@@ -218,6 +218,15 @@
               <div class="placeholder-card" hidden>Tatuaje 5</div>
             </button>
           </figure>
+        </div>
+
+        <div class="gallery-controls" role="group" aria-label="Controles del carrusel">
+          <button type="button" class="gallery-control gallery-control--prev" aria-label="Ver tatuajes anteriores" disabled>
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <button type="button" class="gallery-control gallery-control--next" aria-label="Ver tatuajes siguientes">
+            <span aria-hidden="true">&rarr;</span>
+          </button>
         </div>
 
         <div class="gallery-cta reveal">

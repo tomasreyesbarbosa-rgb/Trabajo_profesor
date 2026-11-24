@@ -77,7 +77,29 @@
 
   toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 
-  /* ---------- 4. Aparición al hacer scroll (con escalonado) ---------- */
+  /* ---------- 4. Carrusel de la galería ---------- */
+  const gallery = $('.gallery-grid');
+  const galleryCards = $$('.gallery-card', gallery);
+  const galleryPrev = $('.gallery-control--prev');
+  const galleryNext = $('.gallery-control--next');
+
+  function updateGalleryControls() {
+    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+    galleryPrev.disabled = gallery.scrollLeft <= 3;
+    galleryNext.disabled = gallery.scrollLeft >= maxScroll - 3;
+  }
+  function scrollGallery(direction) {
+    const gap = parseFloat(getComputedStyle(gallery).columnGap) || 0;
+    const step = galleryCards[0].getBoundingClientRect().width + gap;
+    gallery.scrollBy({ left: direction * step, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  galleryPrev.addEventListener('click', () => scrollGallery(-1));
+  galleryNext.addEventListener('click', () => scrollGallery(1));
+  gallery.addEventListener('scroll', updateGalleryControls, { passive: true });
+  addEventListener('resize', updateGalleryControls);
+  updateGalleryControls();
+
+  /* ---------- 5. Aparición al hacer scroll (con escalonado) ---------- */
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -93,7 +115,7 @@
     revealObserver.observe(el);
   });
 
-  /* ---------- 5. Contador de años ---------- */
+  /* ---------- 6. Contador de años ---------- */
   const counter = $('[data-count]');
   if (counter && !reduceMotion) {
     const target = +counter.dataset.count;
@@ -110,7 +132,7 @@
     }, { threshold: 0.6 }).observe(counter);
   }
 
-  /* ---------- 6. Logo que sigue el cursor (efecto 3D sutil) ---------- */
+  /* ---------- 7. Logo que sigue el cursor (efecto 3D sutil) ---------- */
   const tiltBox = $('#logoTilt');
   const logo = $('.hero__logo', tiltBox);
   if (tiltBox && logo && !reduceMotion && matchMedia('(hover: hover)').matches) {
@@ -124,7 +146,7 @@
     hero.addEventListener('pointerleave', () => { logo.style.transform = ''; });
   }
 
-  /* ---------- 7. Galería: visor de imágenes ---------- */
+  /* ---------- 8. Galería: visor de imágenes ---------- */
   const box = $('#lightbox');
   const boxImg = $('.lightbox__img', box);
   const shots = $$('.gallery-card__btn img').filter(i => !i.hidden);
